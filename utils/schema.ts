@@ -9,3 +9,12 @@ export const aiOutputTable = pgTable('aiOutput', {
   createdBy: varchar('createdBy').notNull(),
   createdAt: timestamp('createdAt').defaultNow().notNull(),
 });
+
+
+export const leadTable = pgTable('leads', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 255 }).notNull(),
+  email: varchar('email', { length: 255 }).notNull(),
+  templateSlug: text('templateSlug').notNull(), // New field
+  createdAt: timestamp('createdAt').defaultNow().notNull(),
+});

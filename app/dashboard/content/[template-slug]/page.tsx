@@ -11,6 +11,7 @@ import { chatSession } from '@/utils/AiModal';
 import { useUser } from '@clerk/nextjs'; // No need to import 'UserResource'
 import moment from 'moment';
 import db from '@/utils/db';
+import { insertLeadPerInteraction } from '@/utils/dbqueries'; // Import the query
 import { aiOutputTable } from '@/utils/schema';
 
 interface PROPS {
@@ -49,6 +50,13 @@ function CreateNewContent({ params }: PROPS) {
       const responseText = await result.response.text();
       setOutput(responseText);
       await SaveInDb(formData, selectedTemplate?.slug, responseText, user);
+      // Insert dummy leads after generating content
+      // Insert a new lead for the current tool usage
+      if (selectedTemplate?.slug) {
+        await insertLeadPerInteraction(selectedTemplate?.slug);
+      }
+
+      
     } catch (error) {
       console.error('Error generating content:', error);
       setOutput('');

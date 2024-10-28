@@ -4,7 +4,7 @@ export default[
         desc:'An AI tool that generates creative marketing ideas based on your business description and marketing challenges. ',
         category:'Marketing',
         icon:'https://cdn-icons-png.flaticon.com/128/3820/3820331.png',
-        aiPrompt:'Give me 5 creative marketing ideas in bullet point format based on the provided business description and marketing problem, and display the results in Rich text editor format.',
+        aiPrompt:'Give me 1 creative marketing ideas in bullet point format based on the provided business description and marketing problem, and display the results in Rich text editor format within 10 words. and give me two llead from any resource to this anything but real user should be ',
         slug:'generate-marketing-idea',
         form:[
             {
@@ -57,7 +57,7 @@ export default[
         desc:'An AI tool that serves as your personal business idea creator, generating catchy and viable business concepts based on your target audience and personal interests.',
         category:'Business',
         icon:'https://cdn-icons-png.flaticon.com/128/11497/11497847.png',
-        aiPrompt:'Generate top 5 business ideas in bullet point format based on the provided target audience and personal interests.t',
+        aiPrompt:'Generate top 1 business ideas in bullet point format based on the provided target audience and personal interest within 10 words only',
         slug:'business-idea-generation',
         form:[
             {

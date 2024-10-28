@@ -14,15 +14,16 @@ function SideNav() {
             path: '/dashboard'
         },
         {
-            name: 'History',
-            icon: FileClock,
-            path: '/dashboard/history'
-        },
-        {
             name: 'Leads',
             icon: Users, // Replace with the appropriate icon component
             path: '/dashboard/leads'
         },
+        {
+            name: 'History',
+            icon: FileClock,
+            path: '/dashboard/history'
+        },
+    
         {
             name: 'Setting',
             icon: Settings,
