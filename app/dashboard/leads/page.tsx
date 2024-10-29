@@ -10,6 +10,8 @@ interface Lead {
   email: string;
   templateSlug: string;
   createdAt: Date;
+  source: string;              // New field for lea source
+  conversionRate: string;      // New field for lead conversion rate
 }
 
 function LeadSection() {
@@ -33,14 +35,17 @@ function LeadSection() {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize first letter of each word
       .join(' ');
   };
+  
   const downloadCSV = () => {
     const csvContent = [
-      ['Template', 'Name', 'Email', 'Date'], // CSV headers
+      ['Template', 'Name', 'Email', 'Date', 'Source', 'Conversion Rate'], // CSV headers updated
       ...leads.map((lead) => [
         formatTemplateSlug(lead.templateSlug),
         lead.name,
         lead.email,
         moment(lead.createdAt).format('MMMM Do YYYY'),
+        lead.source, // Added lead source
+        lead.conversionRate  // Convert string to number and format
       ]),
     ]
       .map((row) => row.join(','))
@@ -78,6 +83,8 @@ function LeadSection() {
             <th className="border px-4 py-2">Name</th>
             <th className="border px-4 py-2">Email</th>
             <th className="border px-4 py-2">Date</th>
+            <th className="border px-4 py-2">Source</th>               {/* New header for source */}
+            <th className="border px-4 py-2">Conversion Rate (%)</th> {/* New header for conversion rate */}
           </tr>
         </thead>
         <tbody>
@@ -91,6 +98,8 @@ function LeadSection() {
               <td className="border px-4 py-2">
                 {moment(lead.createdAt).format('MMMM Do YYYY')}
               </td>
+              <td className="border px-4 py-2">{lead.source}</td>               {/* Display lead source */}
+              <td className="border px-4 py-2">{lead.conversionRate}</td> {/* Display conversion rate */}
             </tr>
           ))}
         </tbody>
