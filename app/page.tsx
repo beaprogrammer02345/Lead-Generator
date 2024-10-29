@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { HiMail, HiSparkles } from 'react-icons/hi';
-import { IoShareSocialSharp } from 'react-icons/io5';
+import { IoShareSocialSharp, IoHammerOutline, IoPeopleSharp } from 'react-icons/io5';
 import { FaCheck } from 'react-icons/fa';
 
 const LandingPage: React.FC = () => {
   return (
     <div className="flex flex-col items-center bg-gray-100">
+      
       <main>
         <Hero />
         <Features />
@@ -20,21 +21,24 @@ const LandingPage: React.FC = () => {
 
 export default LandingPage;
 
+
+
 const Hero: React.FC = () => {
   return (
-    <div className="mx-4 mb-14 mt-6 flex flex-1 flex-col items-center text-center sm:mb-12 md:mb-32 md:mt-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 rounded-lg shadow-lg">
-      <h1 className="max-w-5xl text-3xl font-extrabold sm:text-5xl md:text-6xl">
-        Transform Your Content Into Leads with{' '}
+    <div className="relative mx-4 mb-14 mt-6 flex flex-1 flex-col items-center text-center sm:mb-12 md:mb-32 md:mt-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 rounded-lg shadow-lg overflow-hidden">
+      <div className="absolute inset-0 bg-blue-300 opacity-20 animate-pulse" />
+      <h1 className="max-w-5xl text-3xl font-extrabold sm:text-5xl md:text-6xl relative z-10">
+        Generate High Quality Leads with{' '}
         <span className="bg-gradient-to-r from-red-400 to-purple-300 bg-clip-text text-transparent">
           AI-Powered Tools
         </span>
       </h1>
-      <p className="sm:text-md mt-5 max-w-2xl text-lg md:text-xl">
-        Our AI tool empowers marketers to effortlessly generate leads through interactive content, turning visitors into customers.
+      <p className="sm:text-md mt-5 max-w-2xl text-lg md:text-xl relative z-10">
+        Leverage AI-powered marketing tools to effortlessly generate diverse, high-quality leads from multiple sources.
       </p>
       <div className="mt-3 flex max-w-4xl flex-col flex-wrap items-center justify-around sm:w-full sm:flex-row">
         <Link href="/dashboard">
-          <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300">
+          <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 relative z-10">
             Get Started Today
           </button>
         </Link>
@@ -49,19 +53,19 @@ const Features: React.FC = () => {
       <h2 className="text-4xl font-bold text-center mb-10">Features</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         <FeatureCard
-          title="Engaging AI Lead Magnets"
-          description="Create interactive content that captivates and converts visitors."
-          icon={<HiSparkles className="h-16 w-16 text-blue-500" />}
+          title="AI-Powered Marketing"
+          description="Tailor effective strategies, personas, and plans for success."
+          icon={<HiSparkles className="h-16 w-16 text-blue-500 transition-transform transform hover:scale-125" />}
         />
         <FeatureCard
-          title="Effortless Lead Capture"
-          description="Automate lead generation through smart forms and chatbots."
-          icon={<HiMail className="h-16 w-16 text-blue-500" />}
+          title="Multi-Source Lead Generation"
+          description="Effortlessly generate and capture high-quality leads from diverse channels, including social media."
+          icon={<IoPeopleSharp className="h-16 w-16 text-blue-500 transition-transform transform hover:scale-125" />}
         />
         <FeatureCard
-          title="Social Media Integration"
-          description="Easily share your content on social media to maximize reach."
-          icon={<IoShareSocialSharp className="h-16 w-16 text-blue-500" />}
+          title="Comprehensive Marketing Toolkit"
+          description="AI tools for building personas and optimizing marketing campaigns effectively."
+          icon={<IoHammerOutline className="h-16 w-16 text-blue-500 transition-transform transform hover:scale-125" />}
         />
       </div>
     </div>
@@ -93,33 +97,36 @@ const HowItWorks: React.FC = () => {
       <div className="mx-auto flex flex-col md:max-w-7xl md:space-y-12">
         {/* Step 1 */}
         <HowItWorksStep
-          title="Step 1: Create Your Content"
-          description="Utilize our AI to generate engaging content tailored to your audience."
+          title="Step 1: Select Your Marketing Tools"
+          description="Choose from a variety of AI-driven marketing tools tailored to your unique needs."
           checks={[
             "User-friendly interface",
-            "Customizable templates",
-            "AI-driven insights",
+            "Diverse tool options",
+            "AI-driven recommendations",
           ]}
+          icon={<HiSparkles className="h-10 w-10 text-blue-500" />}
         />
         {/* Step 2 */}
         <HowItWorksStep
-          title="Step 2: Capture Leads"
-          description="Deploy interactive lead magnets and capture leads with ease."
+          title="Step 2: Generate High-Quality Leads"
+          description="Automatically capture leads from various sources based on your selected tools."
           checks={[
-            "Instant lead capture",
-            "Automated email follow-up",
-            "Seamless integration with CRM",
+            "Effortless lead generation",
+            "Integration with multiple channels",
+            "Real-time lead tracking",
           ]}
+          icon={<IoPeopleSharp className="h-10 w-10 text-blue-500" />}
         />
         {/* Step 3 */}
         <HowItWorksStep
-          title="Step 3: Nurture Your Leads"
-          description="Engage and nurture your leads with tailored follow-up strategies."
+          title="Step 3: Leverage Generated Leads"
+          description="Utilize AI-driven strategies to maximize your leads' potential in your business."
           checks={[
-            "Automated content delivery",
-            "Engagement analytics",
-            "Personalized marketing workflows",
+            "Actionable insights for lead conversion",
+            "Tailored marketing strategies",
+            "Enhanced customer engagement techniques",
           ]}
+          icon={<IoHammerOutline className="h-10 w-10 text-blue-500" />}
         />
       </div>
     </div>
@@ -130,12 +137,16 @@ interface HowItWorksStepProps {
   title: string;
   description: string;
   checks: string[];
+  icon: React.ReactNode;
 }
 
-const HowItWorksStep: React.FC<HowItWorksStepProps> = ({ title, description, checks }) => {
+const HowItWorksStep: React.FC<HowItWorksStepProps> = ({ title, description, checks, icon }) => {
   return (
     <div className="flex flex-col items-start justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-      <h3 className="text-xl font-semibold text-blue-500">{title}</h3>
+      <div className="flex items-center mb-2">
+        {icon}
+        <h3 className="ml-3 text-xl font-semibold text-blue-500">{title}</h3>
+      </div>
       <p className="mt-2 font-semibold text-gray-600">{description}</p>
       <ul className="mt-2 list-disc list-inside">
         {checks.map((check, index) => (
@@ -151,11 +162,13 @@ const HowItWorksStep: React.FC<HowItWorksStepProps> = ({ title, description, che
 
 const CallToAction: React.FC = () => {
   return (
-    <section className="py-20 text-center bg-gray-200">
+    <section className="py-20 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-white">
       <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Marketing?</h2>
-      <p className="text-xl mb-6">Join our community of successful marketers and start generating leads today!</p>
+      <p className="text-xl mb-6">
+        Join our community of successful marketers and start generating leads today!
+      </p>
       <Link href="/get-started">
-        <button className="bg-blue-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+        <button className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-200 transition duration-300">
           Start Your Free Trial
         </button>
       </Link>
