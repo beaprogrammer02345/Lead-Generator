@@ -14,30 +14,34 @@ An AI-powered platform built with Next.js, React.js, Clerk, Tailwind CSS, Drizzl
 **Data Storage**: Manage leads and outputs in Neon PostgreSQL.
 ## Setup Instructions
 1)**Clone & Install**
-bash
+``` bash
 git clone https://github.com/your-username/your-repo-name.git  
 cd your-repo-name  
 npm install
+```
 
 
 2)**Environment Variables**
-Create .env.local and add:
+Create `.env.local` and add:
 
-bash
+```bash
 CLERK_API_KEY=your_clerk_api_key  
 GEMINI_API_KEY=your_gemini_api_key  
-DATABASE_URL=your_neon_postgres_url 
+DATABASE_URL=your_neon_postgres_url
+```
 
 3)**Run the App**
 
-bash
-npm run dev  
+``` bash
+npm run dev
+```
 Visit http://localhost:3000.
 
 4)**Sync Database**
 
-bash
-npm run drizzle:sync  
+``` bash
+npm run drizzle:sync
+```
 
 
 ## Usage 
