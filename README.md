@@ -1,17 +1,17 @@
-#Lead Generator
+# Lead Generator
 An AI-powered platform built with Next.js, React.js, Clerk, Tailwind CSS, Drizzle ORM, TypeScript, and Gemini API. It helps generate market-standard responses and dummy leads with contact info, stored in Neon PostgreSQL. These leads and insights can be used for sales, marketing, and other purposes.
 
-#Tech Stack
+# Tech Stack
 Frontend: Next.js, React.js, Tailwind CSS
 Backend: TypeScript, Gemini API
 Auth: Clerk
 Database: Neon PostgreSQL, Drizzle ORM
-#Features
+# Features
 AI Tools: Generate marketing responses using the Gemini API.
 Lead Generation: Create dummy leads with contact info from various sources.
 Authentication: Secure user access via Clerk.
 Data Storage: Manage leads and outputs in Neon PostgreSQL.
-#Setup Instructions
+# Setup Instructions
 1)Clone & Install
 
 bash
@@ -39,17 +39,17 @@ Visit http://localhost:3000.
 bash
 Copy code
 npm run drizzle:sync  
-#Usage
+# Usage
 Login via Clerk.
 Use AI tools to generate marketing responses.
 Create and store leads in the Neon database.
 
-#Contributing
+# Contributing
 Fork the repo.
 Create a branch: git checkout -b feature-name.
 Push and open a pull request.
 
 
-Contact
+# Contact
 📧 annusingh09163@gmail.com
 
