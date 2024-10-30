@@ -8,10 +8,10 @@ An AI-powered platform built with Next.js, React.js, Clerk, Tailwind CSS, Drizzl
 **Database**: Neon PostgreSQL, Drizzle ORM
 
 ## Features
-**AI Tools**: Generate marketing responses using the Gemini API.
-**Lead Generation**: Create dummy leads with contact info from various sources.
-**Authentication**: Secure user access via Clerk.
-**Data Storage**: Manage leads and outputs in Neon PostgreSQL.
+- **AI Tools**: Generate marketing responses using the Gemini API.
+- **Lead Generation**: Create dummy leads with contact info from various sources.
+- **Authentication**: Secure user access via Clerk.
+- **Data Storage**: Manage leads and outputs in Neon PostgreSQL.
 ## Setup Instructions
 1)**Clone & Install**
 ``` bash
