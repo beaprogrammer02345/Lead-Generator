@@ -9,7 +9,7 @@ An AI-powered platform built with Next.js, React.js, Clerk, Tailwind CSS, Drizzl
 
 ## Features
 - **AI Tools**: Generate marketing responses using the Gemini API.
-- **Lead Generation**: Create dummy leads with contact info from various sources.
+- **Lead Generation**: Create dummy leads((due to Twitter & Reddit API rate limit) with contact info from various sources.
 - **Authentication**: Secure user access via Clerk.
 - **Data Storage**: Manage leads and outputs in Neon PostgreSQL.
 ## Setup Instructions
