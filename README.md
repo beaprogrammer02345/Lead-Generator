@@ -2,10 +2,10 @@
 An AI-powered platform built with Next.js, React.js, Clerk, Tailwind CSS, Drizzle ORM, TypeScript, and Gemini API. It helps generate market-standard responses and dummy leads with contact info, stored in Neon PostgreSQL. These leads and insights can be used for sales, marketing, and other purposes.
 
 ## Tech Stack
-**Frontend** : Next.js, React.js, Tailwind CSS
-**Backend**: TypeScript, Gemini API
-**Auth**: Clerk
-**Database**: Neon PostgreSQL, Drizzle ORM
+- **Frontend** : Next.js, React.js, Tailwind CSS
+- **Backend**: TypeScript, Gemini API
+- **Auth**: Clerk
+- **Database**: Neon PostgreSQL, Drizzle ORM
 
 ## Features
 - **AI Tools**: Generate marketing responses using the Gemini API.
